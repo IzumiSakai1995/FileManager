@@ -121,7 +121,7 @@
 
               <!-- 文件名黑名单列表 -->
               <a-list v-else :data="blacklistStore.fileBlacklist" class="blacklist-list">
-                <template #item="{ item, index }">
+                <template #item="{ item }">
                   <a-list-item class="list-item">
                     <div class="item-content">
                       <icon-file class="file-icon" />
@@ -173,7 +173,7 @@
 
               <!-- 文件夹名黑名单列表 -->
               <a-list v-else :data="blacklistStore.folderBlacklist" class="blacklist-list">
-                <template #item="{ item, index }">
+                <template #item="{ item }">
                   <a-list-item class="list-item">
                     <div class="item-content">
                       <icon-folder class="folder-icon" />
@@ -480,6 +480,7 @@ const clearAllStorage = () => {
   margin-bottom: 12px;
 }
 .add-title {
+
   font-weight: 600;
   font-size: 14px;
   color: var(--color-text-1);
